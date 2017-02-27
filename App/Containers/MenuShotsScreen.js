@@ -31,6 +31,7 @@ export default class MenuShots extends React.Component {
         <Image source={Images.barMockHeader} style={styles.menuHeaderImage} resizeMode='stretch' />
         <ScrollView style={styles.container} ref='container'>
           {this.props.shots.map(shot => <MenuFullButton
+            buyDrink={this.props.buyDrink}
             onClickedItem={this.displayShotModal}
             item={shot} price={shot.price}
             text={shot.name}

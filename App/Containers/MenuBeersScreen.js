@@ -32,6 +32,7 @@ export default class MenuBeers extends React.Component {
         <Image source={Images.barMockHeader} style={styles.menuHeaderImage} resizeMode='stretch' />
         <ScrollView style={styles.menuContainer} ref='container' scrollEnabled={false}>
           {this.props.beers.map(beer => <MenuFullButton
+            buyDrink={this.props.buyDrink}
             onClickedItem={this.displayBeerModal}
             item={beer}
             price={beer.price}

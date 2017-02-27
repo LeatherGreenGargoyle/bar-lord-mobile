@@ -21,6 +21,7 @@ export default class FullButton extends React.Component {
     this.removeConfirmSlider = this.removeConfirmSlider.bind(this)
     this.onSlide.bind(this)
     this.orderDrink.bind(this)
+    this.buyDrink.bind(this)
   }
 
   itemClicked (item) {
@@ -31,6 +32,10 @@ export default class FullButton extends React.Component {
     } else {
       this.props.onClickedItem(this.props.item)
     }
+  }
+
+  buyDrink (amount) {
+    this.props.buyDrink(amount)
   }
 
   orderDrink (order) {
@@ -51,6 +56,7 @@ export default class FullButton extends React.Component {
 
   onSlide (order) {
     this.orderDrink(order)
+    this.buyDrink(order.price)
     this.removeConfirmSlider()
   }
 

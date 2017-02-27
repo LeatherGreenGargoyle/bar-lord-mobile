@@ -31,6 +31,7 @@ export default class MenuCocktail extends React.Component {
         <Image source={Images.barMockHeader} style={styles.menuHeaderImage} resizeMode='stretch' />
         <ScrollView style={styles.container} ref='container'>
           {this.props.cocktails.map(cocktail => <MenuFullButton
+            buyDrink={this.props.buyDrink}
             onClickedItem={this.displayCocktailModal}
             item={cocktail}
             price={cocktail.price}
