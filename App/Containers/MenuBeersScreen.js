@@ -38,6 +38,7 @@ export default class MenuBeers extends React.Component {
             price={beer.price}
             text={beer.name}
             key={beer.name}
+            table={this.props.table}
             styles={{marginTop: 0, marginBottom: 0, backgroundColor: Colors.barambeBlack}}
           />)}
         </ScrollView>

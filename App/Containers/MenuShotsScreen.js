@@ -36,6 +36,7 @@ export default class MenuShots extends React.Component {
             item={shot} price={shot.price}
             text={shot.name}
             key={shot.name}
+            table={this.props.table}
             styles={{marginTop: 0, marginBottom: 0, backgroundColor: Colors.barambeBlack}}
           />)}
         </ScrollView>

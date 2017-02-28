@@ -37,6 +37,7 @@ export default class MenuCocktail extends React.Component {
             price={cocktail.price}
             text={cocktail.name}
             key={cocktail.name}
+            table={this.props.table}
             styles={{marginTop: 0, marginBottom: 0, backgroundColor: Colors.barambeBlack}}
           />)}
         </ScrollView>
